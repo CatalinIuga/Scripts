@@ -1,6 +1,7 @@
 import zipfile
 import sys
 import os
+import time
 
 
 if len(sys.argv) < 3:
@@ -23,3 +24,5 @@ with open(wordlist, 'r') as fi:
                 os.rmdir(password.strip())
             except:
                 print(password.strip())
+print('Password was not found in the wordlist :(')
+time.sleep(5)
