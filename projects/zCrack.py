@@ -1,8 +1,9 @@
 import zipfile
 import sys
-import os
-import time
+from os import rmdir
+from time import sleep
 
+# TODO add better input check and man page + maybe more options
 
 if len(sys.argv) < 3:
     print("U need to specify a wordlist and a zip file!")
@@ -21,8 +22,9 @@ with open(wordlist, 'r') as fi:
         except:
             print('TRYING: password ' + password.strip() + ' is invalid')
             try:
-                os.rmdir(password.strip())
+                rmdir(password.strip())
             except:
-                print(password.strip())
-print('Password was not found in the wordlist :(')
-time.sleep(5)
+                continue
+    else:
+            print('Password was not found in the wordlist :(')
+# sleep(5) # i was using it from outside terminal and i wanted to actualy see the result
