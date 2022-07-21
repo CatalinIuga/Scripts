@@ -1,9 +1,9 @@
 import zipfile
 import sys
-from os import rmdir
-from time import sleep
+import os
+import time
 
-# TODO add better input check and man page + maybe more options
+# TODO better input and maybe a manual page + possibly a default wordlist that is included with the script maybe...?
 
 if len(sys.argv) < 3:
     print("U need to specify a wordlist and a zip file!")
@@ -16,15 +16,15 @@ with open(wordlist, 'r') as fi:
     passwords = fi.readlines()
     for password in passwords:
         try:
-            zip_file.extractall(path='result', pwd=bytes(password.strip(),'utf8'))
+            zip_file.extractall(
+                path='result', pwd=bytes(password.strip(), 'utf8'))
             print('SUCCESS: password is ' + password.strip())
             break
         except:
             print('TRYING: password ' + password.strip() + ' is invalid')
             try:
-                rmdir(password.strip())
+                os.rmdir(password.strip())
             except:
-                continue
-    else:
-            print('Password was not found in the wordlist :(')
-# sleep(5) # i was using it from outside terminal and i wanted to actualy see the result
+                print(password.strip())
+print('Password was not found in the wordlist :(')
+time.sleep(5)
