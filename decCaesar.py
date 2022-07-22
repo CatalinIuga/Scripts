@@ -14,19 +14,13 @@ def is_valid(decoded):
     return (len(max_pct) - len(err_no))/len(max_pct)*100
 
 
-def check_for_spaces(l1, l2):
-    for i in range(len(l1)):
-        if i:
-            print(l)
-
-
-if len(sys.argv)<=1:
+if len(sys.argv) <= 1:
     print('Enter a string to decript ')
     inp = input()
-    if len(inp)==0:
+    if len(inp) == 0:
         print('Emplty string not accepted!')
         exit()
-elif len(sys.argv)>=3:
+elif len(sys.argv) >= 3:
     print('Too many arguments. If the string contains whitespaces make sure to use \'\' or ""')
     exit()
 else:
@@ -55,4 +49,4 @@ else:
 print('<------------------------------------->\nWord\tValidation percentage\n<------------------------------------->')
 for i in range(len(result_string)):
     best = result_succes_r8.index(max(result_succes_r8))
-    print(result_string.pop(best), result_succes_r8.pop(best),sep='\t\t')
+    print(result_string.pop(best), result_succes_r8.pop(best), sep='\t\t')
