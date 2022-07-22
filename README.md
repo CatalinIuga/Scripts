@@ -9,4 +9,4 @@ Python3 script to brute force .zip archive that are secured with passwords.
 Decode Caesar cipher. It iterates through all the possible 26 combinations of keys and find the most readable text it can find. 
 - TODO -> both way shift and multiple languages check
 - Usage:\
-    -> python3 decCaesar.py 'text_to_decode'
+    -> python3 decCaesar.py ['text_to_decode']
