@@ -1,9 +1,10 @@
 from string import ascii_lowercase
 import sys
+import pyfiglet
 from time import sleep
 from enchant.checker import SpellChecker
 
-# TODO not bad can be better, esp the spell check
+# TODO not bad can be better, esp the spell check + man page
 
 
 def is_valid(decoded):
@@ -14,6 +15,8 @@ def is_valid(decoded):
     return (len(max_pct) - len(err_no))/len(max_pct)*100
 
 
+ascii_banner = pyfiglet.figlet_format("decCaesar")
+print(ascii_banner)
 if len(sys.argv) <= 1:
     print('Enter a string to decript ')
     inp = input()
