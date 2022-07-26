@@ -15,4 +15,4 @@ Decode Caesar cipher. It iterates through all the possible 26 combinations of ke
 Find open ports of a cetrain host. You can specify a certain port or scan all all possible 65535 possible ports.
 - TODO -> maybe add functionality for directory scan
 - Usage:\
-    -> python3 opScanner.py {host} [port]
+    -> python3 opScanner.py [host] [port]
