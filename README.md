@@ -11,6 +11,6 @@ Decode Caesar cipher. It iterates through all the possible 26 combinations of ke
     -> python3 decCaesar.py ['text_to_decode']
 
 ## 3) opScanner
-Find open ports of a cetrain host. You can specify a certain port or scan all all possible 65535 possible ports.
+Find open ports of a cetrain host. You can specify a certain port or scan all possible 65535 possible ports.
 - Usage:\
     -> python3 opScanner.py [host] [port]
